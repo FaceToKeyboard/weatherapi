@@ -1,0 +1,26 @@
+{
+  "name": "weatherapi",
+  "version": "1.0.0",
+  "description": "a simple backend that makes use of the open weather API",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FaceToKeyboard/weatherapi.git"
+  },
+  "keywords": [
+    "weather",
+    "api",
+    "node",
+    "express",
+    "backend"
+  ],
+  "author": "Fanno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FaceToKeyboard/weatherapi/issues"
+  },
+  "homepage": "https://github.com/FaceToKeyboard/weatherapi#readme"
+}
