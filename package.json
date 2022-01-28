@@ -4,7 +4,7 @@
   "description": "a simple backend that makes use of the open weather API",
   "main": "index.js",
   "scripts": {
-    "test": "jest test",
+    "test": "jest",
     "start": "node -r dotenv/config ./server/index.js"
   },
   "repository": {
