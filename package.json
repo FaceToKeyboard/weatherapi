@@ -4,7 +4,8 @@
   "description": "a simple backend that makes use of the open weather API",
   "main": "index.js",
   "scripts": {
-    "test": "jest test"
+    "test": "jest test",
+    "start": "node -r dotenv/config ./server/index.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,14 @@
   "bugs": {
     "url": "https://github.com/FaceToKeyboard/weatherapi/issues"
   },
-  "homepage": "https://github.com/FaceToKeyboard/weatherapi#readme"
+  "homepage": "https://github.com/FaceToKeyboard/weatherapi#readme",
+  "dependencies": {
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7",
+    "supertest": "^6.2.2"
+  },
+  "type": "module"
 }
