@@ -87,17 +87,25 @@ module.exports.missingMain = {
       "lon": -104.9614,
       "lat": 39.6405
   },
+  "weather": [
+      {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+      }
+  ],
   "base": "stations",
   "visibility": 10000,
   "wind": {
-      "speed": 0.89,
-      "deg": 187,
-      "gust": 3.58
+      "speed": 2.24,
+      "deg": 200,
+      "gust": 4.47
   },
   "clouds": {
       "all": 0
   },
-  "dt": 1643389308,
+  "dt": 1643398121,
   "sys": {
       "type": 2,
       "id": 2011931,
@@ -109,29 +117,37 @@ module.exports.missingMain = {
   "id": 0,
   "name": "Englewood",
   "cod": 200
-};
+}
 
 module.exports.missingTemps = {
   "coord": {
       "lon": -104.9614,
       "lat": 39.6405
   },
+  "weather": [
+      {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+      }
+  ],
   "base": "stations",
   "main": {
-      "feels_like": 273.46,
-      "pressure": 1034,
+      "feels_like": 277.11,
+      "pressure": 1033,
       "humidity": 43
   },
   "visibility": 10000,
   "wind": {
-      "speed": 0.89,
-      "deg": 187,
-      "gust": 3.58
+      "speed": 2.24,
+      "deg": 200,
+      "gust": 4.47
   },
   "clouds": {
       "all": 0
   },
-  "dt": 1643389308,
+  "dt": 1643398121,
   "sys": {
       "type": 2,
       "id": 2011931,
@@ -143,7 +159,7 @@ module.exports.missingTemps = {
   "id": 0,
   "name": "Englewood",
   "cod": 200
-};
+}
 
 module.exports.missingName = {
   "coord": {
