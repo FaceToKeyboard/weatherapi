@@ -150,21 +150,20 @@ describe('Upstream response ok, but missing data', () => {
 describe('User input error handling', () => {
   test('when invalid zipcode format is entered', async () => {
     var response = await request(server).get('/local/abcsd');
-
     expect(response.status).toBe(404);
-    expect(response.body).toBe('city not found');
 
     response = await request(server).get(`/local/&(#^1`);
-
     expect(response.status).toBe(404);
-    expect(response.body).toBe('city not found');
-
-
   });
 });
 
+// needs work - not sure how to simulate a delayed response
 describe.skip('Upstream API connectivity issues', () => {
-  test('when upstream does not respond at all');
-
-  test('when upstream takes too long to respond');
+  test('when upstream takes too long to respond', async () => {
+    axios.get.mockImplementation(() => {
+      setTimeout(() => {}, 10000);
+    });
+    const response = await request(server).get('/local/80113');
+    expect(response.status).toBe(504);
+  });
 })
