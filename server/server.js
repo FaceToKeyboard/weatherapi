@@ -1,5 +1,5 @@
-import axios from 'axios';
-import express from 'express';
+const axios = require('axios');
+const express = require('express');
 
 const weatherApi = {
   hostname: ''
@@ -32,4 +32,4 @@ server.get('/local/:zipcode', async (req, res) => {
 
 });
 
-export { server };
+module.exports = server;

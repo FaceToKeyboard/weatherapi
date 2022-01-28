@@ -1,19 +1,15 @@
-import supertest from 'supertest';
-import axios from 'axios';
+const request = require('supertest');
+const axios = require('axios');
 
-import { server } from '../server/server';
+const server = require('../server/server.js');
+const { fullResponse } = require('./apidummydata.js');
 
-const request = supertest('http://localhost:3000');
-
+jest.mock('axios');
 
 describe('API response correctness', () => {
-  jest.mock('axios', () => {
-    const { fullResponse } = jest.requireActual('./apidummydata.js');
-
-    return {
-      data: fullResponse
-    };
-  });
+  axios.get.mockResolvedValue({
+    data: fullResponse,
+  })
 
   test('Response contains all expected keys', async (done) => {
 
@@ -24,6 +20,7 @@ describe('API response correctness', () => {
     expect(response.body).toHaveProperty('conditions');
     expect(response.body).toHaveProperty('high_temp');
     expect(response.body).toHaveProperty('low_temp');
+
   });
 
 });

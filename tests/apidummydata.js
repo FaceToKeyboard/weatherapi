@@ -1,6 +1,6 @@
-export const emptyData = {};
+module.exports.emptyData = {};
 
-export const fullResponse = {
+module.exports.fullResponse = {
   "coord": {
       "lon": -104.9614,
       "lat": 39.6405
@@ -45,7 +45,7 @@ export const fullResponse = {
   "cod": 200
 };
 
-export const missingWeather = {
+module.exports.missingWeather = {
   "coord": {
       "lon": -104.9614,
       "lat": 39.6405
@@ -82,7 +82,7 @@ export const missingWeather = {
   "cod": 200
 };
 
-export const missingMain = {
+module.exports.missingMain = {
   "coord": {
       "lon": -104.9614,
       "lat": 39.6405
@@ -111,7 +111,7 @@ export const missingMain = {
   "cod": 200
 };
 
-export const missingTemps = {
+module.exports.missingTemps = {
   "coord": {
       "lon": -104.9614,
       "lat": 39.6405
@@ -145,7 +145,7 @@ export const missingTemps = {
   "cod": 200
 };
 
-export const missingName = {
+module.exports.missingName = {
   "coord": {
       "lon": -104.9614,
       "lat": 39.6405
