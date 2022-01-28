@@ -1,25 +1,41 @@
 import supertest from 'supertest';
+import axios from 'axios';
+
+import { server } from '../server/server';
 
 const request = supertest('http://localhost:3000');
 
-describe('API response correctness', () => {
-  test('Response contains all expected keys', async (done) => {
-    // make an api call to the API, then see if the return object/response
-    // has all of the expected keys.
 
-    const response = await request.get('/local/80113');
+describe('API response correctness', () => {
+  jest.mock('axios', () => {
+    const { fullResponse } = jest.requireActual('./apidummydata.js');
+
+    return {
+      data: fullResponse
+    };
+  });
+
+  test('Response contains all expected keys', async (done) => {
+
+    const response = await request(server).get('/local/80113');
 
     expect(response.status).toBe(200);
-    expect(response.status).toHaveProperty('city');
-    expect(response.status).toHaveProperty('conditions');
-    expect(response.status).toHaveProperty('high_temp');
-    expect(response.status).toHaveProperty('low_temp');
+    expect(response.body).toHaveProperty('city');
+    expect(response.body).toHaveProperty('conditions');
+    expect(response.body).toHaveProperty('high_temp');
+    expect(response.body).toHaveProperty('low_temp');
   });
 
 });
 
-describe('Upstream API error handling', () => {
+describe.skip('Upstream API error handling', () => {
   test('Error response when upstream API fails', (done) => {
+
+  });
+});
+
+describe.skip('User input error handling', () => {
+  test('Error response when invalid zipcode/invalid format is entered', (done) => {
 
   });
 });
